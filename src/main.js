@@ -1,12 +1,8 @@
-$(document).ready(function() {
-    let label = $('#Label').val();
-    let note = $('#note').val();
-    $('#add').click(function() {
-        $('.Notes').append(`
-<h1>${label}</h1><br>
-<p>${note}</p><br>
-    
+$(document).ready(function () {
 
-`);
-
-    })});
+    $('#add').click(function () {
+        let label = $('#Label').val();
+        let note = $('#note').val();
+        $('.Notes').append(`<h1>${label}</h1><br><p>${note}</p><br>`);
+    })
+});
