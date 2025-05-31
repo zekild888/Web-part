@@ -17,9 +17,28 @@ $(document).ready(function () {
             </div>`);
             num++;
         }
-        $("#remove").click(function (){
-            $("#note_block").remove();
+
+        $('.Notes').on('click', '#remove', function () {
+            if(archive == false) {
+                $(this).closest('#note_block').remove();
+                num--;
+            }
         });
+        $('.Notes').on('click', '#archive', function () {
+            if(archive == false) {
+                archive = true;
+                $(this).closest('#note_block').css('background-color', 'lightgray');
+                $(this).closest('#note_block').find('.note_label').css('text-decoration', 'line-through');
+                $(this).closest('#note_block').find('.noted_text').css('text-decoration', 'line-through');
+            }
+            else {
+                archive = false;
+                $(this).closest('#note_block').css('background-color', 'white');
+                $(this).closest('#note_block').find('.note_label').css('text-decoration', 'none');
+                $(this).closest('#note_block').find('.noted_text').css('text-decoration', 'none');
+            }})
     });
 
 });
+
+
