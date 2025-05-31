@@ -5,3 +5,53 @@
     align-items: center;
     flex-direction: column;
 }
+
+h1{
+    font-size: 4rem;
+}
+.Header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 20vw;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    border: black solid 2px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+
+
+}
+textarea{
+    width: 20vw;
+    height: 150px;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    border: black solid 2px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.Typer {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    width: 0;
+    animation: typing 2s steps(15) forwards, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 12.5ch }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
