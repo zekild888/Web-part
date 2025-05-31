@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let list = [];
+    let num = 0;
 
     $('#add').click(function () {
         let label = $('#Label').val();
@@ -8,8 +8,21 @@ $(document).ready(function () {
             alert("Enter something in field");
         }
         else {
-            $('.Notes').append(`<div class="note"><h1 class="note_label">${label}</h1><br><p class="noted_text">${note}</p><br></div>`);
-            list.push(0);
+            $('.Notes').append(`<div id="note_block">
+            <h1 class="note_label">${label}</h1>
+            <p class="noted_text">${note}</p><br>
+            <div class="buttons">
+            <button id="archive">Archive</button>
+            <button id="remove">Remove</button>
+            </div>
+            </div>`);
+            list.push(num);
+            console.log(list);
+            num++;
         }
-    })
+        $("#remove").click(function (){
+            $("#note_block").remove();
+        });
+    });
+
 });
