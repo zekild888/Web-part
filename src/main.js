@@ -1,6 +1,5 @@
 $(document).ready(function () {
     let num = 0;
-
     $('#add').click(function () {
         let label = $('#Label').val();
         let note = $('#note').val();
@@ -16,8 +15,6 @@ $(document).ready(function () {
             <button id="remove">Remove</button>
             </div>
             </div>`);
-            list.push(num);
-            console.log(list);
             num++;
         }
         $("#remove").click(function (){
