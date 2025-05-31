@@ -17,6 +17,7 @@ $(document).ready(function () {
             </div>`);
             num++;
         }
+
         $('.Notes').on('click', '#remove', function () {
             if(archive == false) {
                 $(this).closest('#note_block').remove();
@@ -39,4 +40,5 @@ $(document).ready(function () {
     });
 
 });
+
 
