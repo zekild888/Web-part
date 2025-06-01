@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let num = 0;
+    let archive = false;
     $('#add').click(function () {
         let label = $('#Label').val();
         let note = $('#note').val();
@@ -15,13 +15,12 @@ $(document).ready(function () {
             <button id="remove">Remove</button>
             </div>
             </div>`);
-            num++;
+
         }
 
         $('.Notes').on('click', '#remove', function () {
             if(archive == false) {
                 $(this).closest('#note_block').remove();
-                num--;
             }
         });
         $('.Notes').on('click', '#archive', function () {
