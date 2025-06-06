@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
 }
-#note_block{
+.note_block{
     display: flex;
     justify-content: center;
     align-items: center;
