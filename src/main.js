@@ -6,7 +6,7 @@ $(document).ready(function () {
         let label = $('#Label').val();
         let note = $('#note').val();
 
-        if (label === "") {
+        if (label === "" || note === "") {
             alert("Введите что-нибудь в поле");
         } else {
             let newNote = { label: label, note: note, archived: false };
