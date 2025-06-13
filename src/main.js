@@ -18,12 +18,14 @@ $(document).ready(function () {
         }
     });
 
+
     function addNoteToDOM(label, note, archived) {
         let block = $(`<div class="note_block">
-            <h1 class="note_label">${label}</h1>
-            <p class="noted_text">${note}</p><br>
+            <h1 class="note_label" contenteditable="true">${label}</h1>
+            <p class="noted_text" contenteditable="true">${note}</p><br>
             <div class="buttons">
                 <button class="archive">Архивировать</button>
+                <button class="save">Сохранить</button>
                 <button class="remove">Удалить</button>
             </div>
         </div>`);
@@ -34,6 +36,7 @@ $(document).ready(function () {
         }
         $('.Notes').append(block);
     }
+    $('#add').click(function () {})
 
     $('.Notes').on('click', '.remove', function () {
         let block = $(this).closest('.note_block');
